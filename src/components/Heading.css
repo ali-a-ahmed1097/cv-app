@@ -10,8 +10,18 @@
     font-size: 12px;
 }
 
+.details > div {
+    display: flex;
+    gap: 6px;
+}
+
 .person-name {
     color: #195c70;
     margin: 0;
     text-transform: uppercase;
+}
+
+.small {
+    width: 14px;
+    height: 16px;
 }
