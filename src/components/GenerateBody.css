@@ -1,0 +1,38 @@
+.section-head {
+    color: #377ea4;
+    font-weight: 300;
+    margin-bottom: -10px;
+}
+
+.deets {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.deets > div:first-of-type {
+    margin-right: auto;
+}
+
+.primary {
+    color: #5E5E5E;
+    font-weight: bold;
+}
+
+.secondary {
+    color: #5E5E5E;
+}
+
+.desc {
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.open {
+    margin-top: 24px;
+}
+
+.full {
+    margin-top: 32px;
+}

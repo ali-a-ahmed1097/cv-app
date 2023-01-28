@@ -7,31 +7,33 @@ export default function GenerateBody(props) {
     const title = education ? 'Education' : 'Work Experience';
 
     React.useEffect(() => {
-        if(props.replacement[0] === education) setOb(props.replacement.slice(1));
+        if (props.replacement[0] === education) setOb(props.replacement.slice(1));
     }, [props.replacement]);
 
     const items = education ?
         ob.map((item, index) => (
-        <div key={index}>
-            <div>{item['Program']}</div>
-            <div>{item['Institution']}</div>
-            <div>{item['Start Date']}</div>
-            <div>{item['End Date']}</div>
-        </div>
+            <div key={index} className='deets open'>
+                <div className="primary">{item['Program']}</div>
+                <div className="secondary">{item['Institution']} | </div>
+                <div className="primary">{item['Start Date']} – </div>
+                <div className="primary">{item['End Date']}</div>
+            </div>
         ))
         : ob.map((item, index) => (
-            <div key={index}>
-                <div>{item['Company']}</div>
-                <div>{item['Position']}</div>
-                <div>{item['Start Date']}</div>
-                <div>{item['End Date']}</div>
-                <div>{item['Description']}</div>
+            <div key={index} className="open">
+                <div className="deets">
+                    <div className="primary">{item['Company']}</div>
+                    <div className="secondary">{item['Position']} | </div>
+                    <div className="primary">{item['Start Date']} –</div>
+                    <div className="primary">{item['End Date']}</div>
+                </div>
+                <div className="desc">{item['Description']}</div>
             </div>
-            ));
+        ));
 
     return (
-        <div>
-            {ob.length > 0 && <h3>{title}</h3>}
+        <div className="full">
+            {ob.length > 0 && <h3 className="section-head">{title}</h3>}
             {items}
         </div>
     );
