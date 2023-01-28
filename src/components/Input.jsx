@@ -13,6 +13,10 @@ export default function Input(props) {
         setValues(prevValues => ({...prevValues, [name]: value}));
     }
 
+    React.useEffect( () => {
+        props.handleChange(values)
+    }, [values]);
+
     const inputsArr = props.inputNames.map((nm, key) => (
         <input key={key} type='text' name={nm} placeholder={nm} value={values[nm]} onChange={handleChange} />
     ));

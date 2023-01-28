@@ -1,0 +1,17 @@
+.person {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.person-name {
+    color: #195c70;
+    margin: 0;
+    text-transform: uppercase;
+}

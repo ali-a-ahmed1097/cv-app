@@ -11,10 +11,14 @@ export default function BodyForm(props) {
         textBoxes = ['Program', 'University', 'Start Date', 'End Date', 'Description'];
     }
 
+    function handleChange(values) {
+        props.handleChange(values);
+    }
+
     return (
         <div>
             <h2 className="form-title">{title}</h2>
-            <Input inputNames={textBoxes} />
+            <Input inputNames={textBoxes} handleChange={handleChange} />
         </div>
     );
 }
