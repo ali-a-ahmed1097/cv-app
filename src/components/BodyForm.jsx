@@ -6,15 +6,15 @@ export default function BodyForm(props) {
     const [valuesArr, setValuesArr] = React.useState([]);
 
     React.useEffect(() => {
-        props.handleChange(valuesArr, props.which);
+        props.handleChange(valuesArr, props.education);
     }, [valuesArr]);
 
     let title = 'Work Experience';
     let textBoxes = ['Company', 'Position', 'Start Date', 'End Date', 'Description'];
 
-    if (props.which) {
+    if (props.education) {
         title = 'Education';
-        textBoxes = ['Program', 'University', 'Start Date', 'End Date'];
+        textBoxes = ['Program', 'Institution', 'Start Date', 'End Date'];
     }
 
     function handleChange(event) {

@@ -3,6 +3,7 @@ import Personal from "./components/Personal";
 import BodyForm from "./components/BodyForm";
 import Heading from "./components/Heading";
 import './App.css';
+import GenerateBody from "./components/GenerateBody";
 
 export default function App() {
     const [pVals, setPVals] = React.useState({});
@@ -12,8 +13,8 @@ export default function App() {
         setPVals(values);
     }
 
-    function getBodyChange(values, which) {
-        setBVals([which, ...values]);
+    function getBodyChange(values, education) {
+        setBVals([education, ...values]);
     }
 
     return (
@@ -21,12 +22,14 @@ export default function App() {
             <div className="input-boxes">
                 <form>
                     <Personal handleChange={getPersonalChange} />
-                    <BodyForm which={0} handleChange={getBodyChange} />
-                    <BodyForm which={1} handleChange={getBodyChange} />
+                    <BodyForm education={false} handleChange={getBodyChange} />
+                    <BodyForm education={true} handleChange={getBodyChange} />
                 </form>
             </div>
             <div className="generated-output">
                 <Heading replacement={pVals}/>
+                <GenerateBody education={false} replacement={bVals} />
+                <GenerateBody education={true} replacement={bVals} />
             </div>
         </div>
     );
