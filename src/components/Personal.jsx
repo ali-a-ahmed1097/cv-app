@@ -2,8 +2,8 @@ import React from "react";
 import Input from "./Input";
 
 export default function Personal(props) {
-    const textBoxes = ['Name', 'Title', 'Phone', 'Email', 'Location'];
-    const [values, setValues] = React.useState({'Name': '', 'Title': '', 'Phone': '', 'Email': '', 'Location': ''});
+    const textBoxes = ['Name', 'Title', 'Phone', 'Email', 'Location', 'Description'];
+    const [values, setValues] = React.useState({'Name': '', 'Title': '', 'Phone': '', 'Email': '', 'Location': '', 'Description': ''});
 
     function handleChange(event) {
         const {name, value} = event.target;
