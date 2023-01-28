@@ -48,3 +48,12 @@ form {
     flex-direction: column;
     gap: 8px;
 }
+
+button {
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    color: chocolate;
+}
