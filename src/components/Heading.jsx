@@ -8,7 +8,7 @@ export default function Heading(props) {
     const [ob, setOb] = React.useState({});
 
     React.useEffect(() => {
-        if (props.replacement.to === 'Personal') setOb(props.replacement);
+        setOb(props.replacement);
     }, [props.replacement]);
 
     return (
