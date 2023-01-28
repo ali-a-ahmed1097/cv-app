@@ -16,8 +16,8 @@ export default function App() {
             <div className="input-boxes">
                 <form>
                     <Personal handleChange={getChange} />
-                    {/* <BodyForm which={0} handleChange={getChange} />
-                    <BodyForm which={1} handleChange={getChange} /> */}
+                    <BodyForm which={0} handleChange={getChange} />
+                    {/* <BodyForm which={1} handleChange={getChange} /> */}
                 </form>
             </div>
             <div className="generated-output">
