@@ -19,9 +19,23 @@
     color: #195c70;
     margin: 0;
     text-transform: uppercase;
+    font-size: 34px;
 }
 
 .small {
     width: 14px;
     height: 16px;
+}
+
+.king {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.person-title {
+    color: #5E5E5E;
+    margin: 0;
+    font-weight: 100;
+    font-size: 20px;
 }

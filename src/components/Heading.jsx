@@ -13,9 +13,9 @@ export default function Heading(props) {
 
     return (
         <div className="person">
-            <div>
+            <div className='king'>
                 <h1 className='person-name'> {ob['Name']} </h1>
-                <div className="person-title">{ob['Title']}</div>
+                <h2 className="person-title">{ob['Title']}</h2>
             </div>
             <div className="details">
                 <div>
