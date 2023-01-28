@@ -6,11 +6,11 @@ export default function Input(props) {
         inpObj[props.inputNames[i]] = '';
     }
 
-    const [values, setValues] = React.useState(inpObj);
-
+    const [values, setValues] = React.useState(props.inputVals ? props.inputVals : inpObj);
+    
     function handleChange(event) {
         const {name, value} = event.target;
-        setValues(prevValues => ({...prevValues, [name]: value}));
+        setValues(prevValues => ({...prevValues, [name]: value, index: props.index}));
     }
 
     React.useEffect( () => {
