@@ -1,0 +1,35 @@
+.app {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 25px;
+}
+
+.input-boxes, .generated-output {
+    border-radius: 5px;
+    width: 595px;
+    height: 800px;
+    padding: 40px;
+}
+
+.input-boxes {
+    border: 2px solid black;
+}
+
+.generated-output {
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px gray;
+}
+
+.internal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-title {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: gray;
+    font-weight: 100;
+}
