@@ -5,23 +5,28 @@ import Heading from "./components/Heading";
 import './App.css';
 
 export default function App() {
-    const [vals, setVals] = React.useState({to: '', num: 0});
+    const [pVals, setPVals] = React.useState({});
+    const [bVals, setBVals] = React.useState({});
 
-    function getChange(values) {
-        setVals(values);
+    function getPersonalChange(values) {
+        setPVals(values);
+    }
+
+    function getBodyChange(values, which) {
+        setBVals([which, ...values]);
     }
 
     return (
         <div className='app'>
             <div className="input-boxes">
                 <form>
-                    <Personal handleChange={getChange} />
-                    <BodyForm which={0} handleChange={getChange} />
-                    {/* <BodyForm which={1} handleChange={getChange} /> */}
+                    <Personal handleChange={getPersonalChange} />
+                    <BodyForm which={0} handleChange={getBodyChange} />
+                    <BodyForm which={1} handleChange={getBodyChange} />
                 </form>
             </div>
             <div className="generated-output">
-                <Heading replacement={vals}/>
+                <Heading replacement={pVals}/>
             </div>
         </div>
     );

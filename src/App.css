@@ -2,6 +2,10 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
+div::-webkit-scrollbar {
+    display: none;
+}
+
 .app {
     display: flex;
     justify-content: center;
@@ -14,6 +18,7 @@ body {
     width: 595px;
     height: 800px;
     padding: 40px;
+    overflow-y: scroll;
 }
 
 .input-boxes {
